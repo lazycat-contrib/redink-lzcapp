@@ -17,6 +17,7 @@ services:
     image: registry.lazycat.cloud/czyt/histonemax/redink:44d2bdff47147976
     binds:
       - /lzcapp/var/output:/app/output
+      - /lzcapp/var/history:/app/history
       - /lzcapp/var/config:/app/config
     setup_script: |
       if [! -f /lzcapp/var/config/text_providers.yaml ]; then
