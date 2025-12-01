@@ -1,6 +1,6 @@
 name: 红墨
 package: community.lazycat.app.redink
-version: 1.3.0
+version: 1.4.0
 description: 基于🍌Nano Banana Pro🍌 的一站式小红书图文生成器 《一句话一张图片生成小红书图文》
 homepage: https://github.com/HisMax/RedInk
 author: HisMax
@@ -14,7 +14,7 @@ application:
 services:
   redink:
     # histonemax/redink:latest
-    image: registry.lazycat.cloud/czyt/histonemax/redink:877d65d290814a33
+    image: registry.lazycat.cloud/czyt/histonemax/redink:44d2bdff47147976
     binds:
       - /lzcapp/var/output:/app/output
       - /lzcapp/var/config:/app/config
