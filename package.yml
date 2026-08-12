@@ -1,0 +1,15 @@
+package: community.lazycat.app.redink
+version: 1.4.0
+name: 红墨
+description: "基于 Nano Banana Pro 的一站式小红书图文生成器"
+homepage: https://github.com/HisMax/RedInk
+author: HisMax
+min_os_version: 1.5.0
+
+locales:
+  zh:
+    name: 红墨
+    description: "基于 Nano Banana Pro 的一站式小红书图文生成器"
+  en:
+    name: Red Ink
+    description: "A one-stop Xiaohongshu image-and-text generator based on Nano Banana Pro."

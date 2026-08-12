@@ -1,9 +1,3 @@
-name: 红墨
-package: community.lazycat.app.redink
-version: 1.4.0
-description: 基于🍌Nano Banana Pro🍌 的一站式小红书图文生成器 《一句话一张图片生成小红书图文》
-homepage: https://github.com/HisMax/RedInk
-author: HisMax
 application:
   subdomain: redink
   background_task: true
@@ -20,22 +14,14 @@ services:
       - /lzcapp/var/history:/app/history
       - /lzcapp/var/config:/app/config
     setup_script: |
-      if [! -f /lzcapp/var/config/text_providers.yaml ]; then
+      if [ ! -f /lzcapp/var/config/text_providers.yaml ]; then
          cp -r /app/text_providers.yaml /lzcapp/var/config/text_providers.yaml
       fi
       rm /app/text_providers.yaml
       ln -s /lzcapp/var/config/text_providers.yaml /app/text_providers.yaml
 
-      if [! -f /lzcapp/var/config/image_providers.yaml ]; then
+      if [ ! -f /lzcapp/var/config/image_providers.yaml ]; then
          cp -r /app/image_providers.yaml /lzcapp/var/config/image_providers.yaml
       fi
       rm /app/image_providers.yaml
       ln -s /lzcapp/var/config/image_providers.yaml /app/image_providers.yaml
-
-locales:
-  zh:
-    name: 红墨
-    description: "基于🍌Nano Banana Pro🍌 的一站式小红书图文生成器 《一句话一张图片生成小红书图文》"
-  en:
-    name: Red Ink
-    description: "A one-stop Xiaohongshu image-and-text generator based on the 🍌Nano Banana Pro🍌, One Sentence, One Image: Generate Xiaohongshu Text and Images."
